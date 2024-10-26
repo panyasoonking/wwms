@@ -1,0 +1,59 @@
+/* menu.css */
+
+/* เมนูด้านข้าง */
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding: 15px;
+    box-sizing: border-box;
+    position: fixed;
+    transform: translateX(-250px); /* ซ่อนเมนูโดยเลื่อนไปทางซ้าย */
+    transition: transform 0.3s ease; /* ทำให้การเลื่อนนุ่มนวล */
+}
+.sidebar.open {
+    transform: translateX(0); /* แสดงเมนู */
+}
+.sidebar h2 {
+    text-align: center;
+    color: #f4f4f9;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin: 20px 0;
+}
+.sidebar ul li a {
+    color: #f4f4f9;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.sidebar ul li a i {
+    margin-right: 10px; /* ระยะห่างระหว่างไอคอนและข้อความ */
+}
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+/* ปุ่มเปิด-ปิดเมนู */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #fcfbfb;
+    color: #0f0f0f;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.menu-toggle i {
+    font-size: 20px;
+}

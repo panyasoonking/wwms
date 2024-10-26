@@ -1,0 +1,199 @@
+/* product_out.css */
+
+/* ตั้งค่าสไตล์พื้นฐานสำหรับ container */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e6e5e5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* สไตล์หัวข้อหลัก */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ฟอร์มกรอกข้อมูล */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    width: 30%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 70%;
+    max-width: 500px;
+}
+
+/* ปุ่ม Export */
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* ตาราง */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    margin-top: 10px;
+    table-layout: fixed;
+    border: 1px solid #ddd;
+}
+
+/* ตั้งค่ากึ่งกลางให้หัวข้อ */
+th {
+    padding: 12px;
+    text-align: center; /* จัดกึ่งกลาง */
+    border: 1px solid #ddd; /* เส้นบางๆ ระหว่างหัวข้อ */
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+/* ข้อมูลในแถวชิดขวา */
+td {
+    padding: 12px;
+    text-align: right; /* ชิดขวา */
+    border: 1px solid #ddd; /* เส้นบางๆ ระหว่างเซลล์ */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #e0f7e7;
+}
+
+/* ปรับคอลัมน์ Export Date ให้แสดงข้อมูลครบ */
+th:nth-child(6), td:nth-child(6) {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    max-width: 150px;
+}
+
+/* ปุ่ม Print และ PDF */
+.action-button {
+    color: white;
+    padding: 6px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.85em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    transition: background-color 0.3s ease;
+    margin: 2px auto;
+    box-sizing: border-box;
+}
+
+.print-button {
+    background-color: #007BFF;
+}
+
+.pdf-button {
+    background-color: #FF5733;
+}
+
+.action-button i {
+    margin-right: 5px;
+    font-size: 1em;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+/* การตอบสนองบนอุปกรณ์ขนาดเล็ก */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+
+    input, select, textarea {
+        width: 100%;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 0.85em;
+    }
+
+    .action-button {
+        width: 70px;
+        padding: 6px 8px;
+        font-size: 0.8em;
+    }
+
+    .action-button i {
+        font-size: 0.9em;
+        margin-right: 3px;
+    }
+}
